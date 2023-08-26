@@ -5,5 +5,5 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-# Replace gnome mutter with patched version built with MR 1441 (dynamic triple buffering)
-rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:calcastor:gnome-patched mutter
+# Provides Mutter & GNOME Control Center with Dor Askayo's Wayland VRR MR applied.
+rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:kylegospo:gnome-vrr mutter mutter-common gnome-control-center gnome-control-center-filesystem xorg-x11-server-Xwayland
