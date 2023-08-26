@@ -14,20 +14,33 @@ wget -O gnome-shell-extension-installer "https://raw.githubusercontent.com/brune
 chmod +x gnome-shell-extension-installer
 mv gnome-shell-extension-installer /usr/bin/
 
-# install appindicator and kstatusnotifieritem support
-gnome-shell-extension-installer --yes 615
+declare -a gnome_extensions
+gnome_extensions=()
+gnome_extensions+=( 7 ) # 7 removeable drive menu
+gnome_extensions+=( 97 ) # 97 coverflow alt-tab
+gnome_extensions+=( 277 ) # 277 impatience
+gnome_extensions+=( 307 ) # 307 dash-to-dock
+gnome_extensions+=( 517 ) # 517 caffeine
+gnome_extensions+=( 615 ) # 615 appindicator and kstatusnotifieritem support
+gnome_extensions+=( 779 ) # 779 clipboard indicator
+gnome_extensions+=( 1262 ) # 1262 bing wallpaper
+gnome_extensions+=( 1386 ) # 1386 notification counter
+gnome_extensions+=( 1446 ) # 1446 transparent window moving
+gnome_extensions+=( 3956 ) # 3956 gnome fuzzy app search
+gnome_extensions+=( 4257 ) # 4257 scroll panel
+gnome_extensions+=( 4481 ) # 4481 forge
+gnome_extensions+=( 4691 ) # 4691 PiP on top
+gnome_extensions+=( 4709 ) # 4709 another window session manager
+gnome_extensions+=( 4711 ) # 4711 prevent double empty window
+gnome_extensions+=( 4854 ) # 4854 system76 scheduler
+gnome_extensions+=( 4937 ) # 4937 draw on your screen 2
+gnome_extensions+=( 5090 ) # 5090 space bar
+gnome_extensions+=( 5353 ) # 5353 window state manager
+gnome_extensions+=( 5410 ) # 5410 grand theft focus
+gnome_extensions+=( 5425 ) # 5425 battery time
+gnome_extensions+=( 5482 ) # 5482 toggle workspace span
+gnome_extensions+=( 5835 ) # 5835 rx input layout switcher
+gnome_extensions+=( 5856 ) # 5856 overview background
+gnome_extensions+=( 5895 ) # 5895 app hider
 
-# install dash-to-dock
-gnome-shell-extension-installer --yes 307
-
-# install another window session manager
-gnome-shell-extension-installer --yes 4709
-
-# install app hider
-gnome-shell-extension-installer --yes 5895
-
-# install battery time
-gnome-shell-extension-installer --yes 5425
-
-# install bing wallpaper
-gnome-shell-extension-installer --yes 1262
+gnome-shell-extension-installer --yes ${gnome_extensions[@]}
