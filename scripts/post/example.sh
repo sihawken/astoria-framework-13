@@ -6,7 +6,8 @@
 set -oue pipefail
 
 # Your code goes here.
-# Dependancies for gnome-shell-extension-installer
+
+# Dependencies for gnome-shell-extension-installer
 rpm-ostree install bash curl dbus perl git less
 
 wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer"
