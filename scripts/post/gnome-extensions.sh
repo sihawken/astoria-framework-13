@@ -10,6 +10,6 @@ set -oue pipefail
 # Dependencies for gnome-shell-extension-installer
 rpm-ostree install bash curl dbus perl git less
 
-wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer"
+wget -O gnome-shell-extension-installer "https://raw.githubusercontent.com/brunelli/gnome-shell-extension-installer/master/gnome-shell-extension-installer"
 chmod +x gnome-shell-extension-installer
 mv gnome-shell-extension-installer /usr/bin/
