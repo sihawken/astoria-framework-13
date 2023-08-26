@@ -25,3 +25,9 @@ gnome-shell-extension-installer --yes 4709
 
 # install app hider
 gnome-shell-extension-installer --yes 5895
+
+# install battery time
+gnome-shell-extension-installer --yes 5425
+
+# install bing wallpaper
+gnome-shell-extension-installer --yes 1262
