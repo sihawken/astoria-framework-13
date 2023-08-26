@@ -6,6 +6,6 @@
 set -oue pipefail
 
 # Your code goes here.
-wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-install"
+wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer"
 chmod +x gnome-shell-extension-installer
 mv gnome-shell-extension-installer /usr/bin/
