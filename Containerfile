@@ -27,9 +27,7 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 COPY build.sh /tmp/build.sh
 RUN chmod +x /tmp/build.sh && /tmp/build.sh
 
-RUN rm -rf /var/*
-COPY var /var
-
 RUN rm -rf \
         /tmp/* \
+        /var/* && \
     ostree container commit
