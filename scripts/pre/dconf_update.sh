@@ -5,7 +5,5 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-# Your code goes here.
-rpm-ostree install system76-scheduler
-
-systemctl enable com.system76.Scheduler.service
+systemctl unmask dconf-update.service
+systemctl enable dconf-update.service
