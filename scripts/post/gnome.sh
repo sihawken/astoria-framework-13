@@ -23,7 +23,6 @@ gnome_extensions+=( 307 ) # 307 dash-to-dock
 gnome_extensions+=( 517 ) # 517 caffeine
 gnome_extensions+=( 615 ) # 615 appindicator and kstatusnotifieritem support
 gnome_extensions+=( 779 ) # 779 clipboard indicator
-gnome_extensions+=( 1262 ) # 1262 bing wallpaper
 gnome_extensions+=( 1386 ) # 1386 notification counter
 gnome_extensions+=( 1446 ) # 1446 transparent window moving
 gnome_extensions+=( 3956 ) # 3956 gnome fuzzy app search
