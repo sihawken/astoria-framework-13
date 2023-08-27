@@ -1,0 +1,5 @@
+ublue_variants:
+  - label: etc/dconf/db/gdm.d/00-touchpad
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: startingpoint
