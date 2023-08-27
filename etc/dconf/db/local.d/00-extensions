@@ -1,7 +1,7 @@
 [org/gnome/shell]
 enabled-extensions=['another-window-session-manager@gmail.com', 'app-hider@lynith.dev', 'appindicatorsupport@rgcjonas.gmail.com', 'batterytime@typeof.pw', 'BingWallpaper@ineffable-gmail.com', 'caffeine@patapon.info', 'clipboard-indicator@tudmotu.com', 'CoverflowAltTab@palatis.blogspot.com', 'dash-to-dock@micxgx.gmail.com', 'draw-on-your-screen2@zhrexl.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'forge@jmmaranan.com', 'gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'grand-theft-focus@zalckos.github.com', 'impatience@gfxmonk.net', 'io.github.mreditor.gnome-shell-extensions.scroll-panel', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'NotificationCounter@coolllsk', 'overviewbackground@github.com.orbitcorrection', 'pip-on-top@rafostar.github.com', 'prevent-double-empty-window@silliewous.nl', 'rx-input-layout-switcher@wzmn.net', 's76-scheduler@mattjakeman.com', 'space-bar@luchrioh', 'toggle-workspace-span@arngo.github.com', 'transparent-window-moving@noobsai.github.com', 'window-state-manager@kishorv06.github.io']
 
-[/org/gnome/shell/extensions/bingwallpaper]
+[org/gnome/shell/extensions/bingwallpaper]
 delete-previous=true
 download-folder='~/Pictures/BingWallpaper/'
 hide=true
@@ -10,10 +10,10 @@ notify=false
 override-lockscreen-blur=false
 selected-image='current'
 
-[/org/gnome/shell/extensions/caffeine]
+[org/gnome/shell/extensions/caffeine]
 indicator-position-max=2
 
-[/org/gnome/shell/extensions/coverflowalttab]
+[org/gnome/shell/extensions/coverflowalttab]
 icon-style='Overlay'
 overlay-icon-size=118.0
 perspective-correction-method='None'
@@ -22,20 +22,20 @@ switch-per-monitor=true
 switcher-style='Coverflow'
 use-glitch-effect=false
 
-[/org/gnome/shell/extensions/dash-to-dock]
+[org/gnome/shell/extensions/dash-to-dock]
 background-opacity=0.80000000000000004
 dash-max-icon-size=48
 dock-position='BOTTOM'
 height-fraction=0.90000000000000002
 
-[/org/gnome/shell/extensions/forge]
+[org/gnome/shell/extensions/forge]
 css-last-update=uint32 37
 stacked-tiling-mode-enabled=false
 tabbed-tiling-mode-enabled=false
 tiling-mode-enabled=true
 window-gap-hidden-on-single=false
 
-[/org/gnome/shell/extensions/forge/keybindings]
+[org/gnome/shell/extensions/forge/keybindings]
 con-split-horizontal=[/org/gnome/shell/extensions/'<Super>z']
 con-split-layout-toggle=[/org/gnome/shell/extensions/'<Super>g']
 con-split-vertical=[/org/gnome/shell/extensions/'<Super>v']
@@ -76,14 +76,14 @@ window-toggle-always-float=[/org/gnome/shell/extensions/'<Shift><Super>c']
 window-toggle-float=[/org/gnome/shell/extensions/'<Super>c']
 workspace-active-tile-toggle=[/org/gnome/shell/extensions/'<Shift><Super>w']
 
-[/org/gnome/shell/extensions/mreditor/scroll-panel]
+[org/gnome/shell/extensions/mreditor/scroll-panel]
 highlight-path=@as [/org/gnome/shell/extensions/]
 picking-actor-path-action=''
 
-[/org/gnome/shell/extensions/net/gfxmonk/impatience]
+[org/gnome/shell/extensions/net/gfxmonk/impatience]
 speed-factor=0.5
 
-[/org/gnome/shell/extensions/search-light]
+[org/gnome/shell/extensions/search-light]
 background-color=(0.12999999523162842, 0.12999999523162842, 0.12999999523162842, 1.0)
 blur-brightness=0.59999999999999998
 blur-sigma=30.0
@@ -94,9 +94,9 @@ scale-width=0.10000000000000001
 shortcut-search=[/org/gnome/shell/extensions/'<Super>f']
 text-color=(1.0, 1.0, 1.0, 1.0)
 
-[/org/gnome/shell/extensions/space-bar/behavior]
+[org/gnome/shell/extensions/space-bar/behavior]
 position='left'
 
-[/org/gnome/shell/extensions/transparent-window-moving]
+[org/gnome/shell/extensions/transparent-window-moving]
 transparent-on-resizing=false
 window-opacity=203
