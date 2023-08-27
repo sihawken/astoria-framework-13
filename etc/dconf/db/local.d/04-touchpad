@@ -1,4 +1,4 @@
-[/org/gnome/desktop/peripherals/touchpad/]
+[/org/gnome/desktop/peripherals/touchpad]
 speed=0.096
 tap-to-click=true
 two-finger-scrolling-enabled=true
