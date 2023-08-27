@@ -35,10 +35,6 @@ tabbed-tiling-mode-enabled=false
 tiling-mode-enabled=true
 window-gap-hidden-on-single=false
 
-[org/gnome/shell/extensions/mreditor/scroll-panel]
-highlight-path=@as [/org/gnome/shell/extensions/]
-picking-actor-path-action=''
-
 [org/gnome/shell/extensions/net/gfxmonk/impatience]
 speed-factor=0.5
 
