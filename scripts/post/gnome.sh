@@ -45,4 +45,5 @@ gnome_extensions+=( 5895 ) # 5895 app hider
 
 gnome-shell-extension-installer --yes ${gnome_extensions[@]}
 
+# Fixes permission issues with system extensions
 chmod 655 -R /usr/share/gnome-shell/extensions/*/*
