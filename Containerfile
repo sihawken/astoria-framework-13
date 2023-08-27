@@ -11,7 +11,6 @@ ARG RECIPE
 # see issue #28 (https://github.com/ublue-os/startingpoint/issues/28)
 COPY etc /usr/etc
 COPY usr /usr
-COPY var /var
 
 # copy scripts
 RUN mkdir /tmp/scripts
@@ -28,13 +27,9 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 COPY build.sh /tmp/build.sh
 RUN chmod +x /tmp/build.sh && /tmp/build.sh
 
-# # clean up and finalize container build
-# RUN rm -rf \
-#         /tmp/* \
-#         /var/* && \
-#     ostree container commit
+RUN rm -rf /var/*
+COPY var /var
 
-# clean up and finalize container build
 RUN rm -rf \
         /tmp/* \
     ostree container commit
