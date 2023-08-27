@@ -1,5 +1,6 @@
 ublue_variants:
-  - label: etc/dconf/db/gdm.d/00-touchpad
+  - label: sihawken/silverblue-framework-13
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: silverblue-framework-13-intel-12g
+        info: silverblue for the 13in 12th gen framework laptop
