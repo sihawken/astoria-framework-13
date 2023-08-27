@@ -42,17 +42,6 @@ picking-actor-path-action=''
 [org/gnome/shell/extensions/net/gfxmonk/impatience]
 speed-factor=0.5
 
-[org/gnome/shell/extensions/search-light]
-background-color=(0.12999999523162842, 0.12999999523162842, 0.12999999523162842, 1.0)
-blur-brightness=0.59999999999999998
-blur-sigma=30.0
-entry-font-size=1
-monitor-count=1
-scale-height=0.10000000000000001
-scale-width=0.10000000000000001
-shortcut-search=[/org/gnome/shell/extensions/'<Super>f']
-text-color=(1.0, 1.0, 1.0, 1.0)
-
 [org/gnome/shell/extensions/space-bar/behavior]
 position='left'
 
