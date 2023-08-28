@@ -14,8 +14,6 @@ echo "devices/pci0000:00/0000:00:02.0/sriov_numvfs = 7" > /etc/sysfs.conf
 ln -s /usr/bin/rpm-ostree /usr/bin/dnf
 ln -s /usr/bin/ld.bfd /etc/alternatives/ld && ln -s /etc/alternatives/ld /usr/bin/ld 
 
-rm -rf /usr/lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/kernel/drivers/gpu/drm/i915/i915.ko.xz
-
 # Install akmod-i915
 rpm-ostree install akmod-i915-sriov
 
