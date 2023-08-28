@@ -8,6 +8,7 @@ set -oue pipefail
 
 # Install akmod-i915
 rpm-ostree install akmod-i915-sriov
+ln -s /usr/bin/ld.bfd /etc/alternatives/ld && ln -s /etc/alternatives/ld /usr/bin/ld 
 akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --kmod i915-sriov
 
 # FOLLOWING INSTRUCTIONS FROM:
