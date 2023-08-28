@@ -20,7 +20,7 @@ dock-position='BOTTOM'
 height-fraction=0.90000000000000002
 
 [org/gnome/shell/extensions/mreditor/scroll-panel]
-workspaces-switcher-visualize=true
+workspaces-switcher-visualize=false
 
 [org/gnome/shell/extensions/forge]
 css-last-update=uint32 37
