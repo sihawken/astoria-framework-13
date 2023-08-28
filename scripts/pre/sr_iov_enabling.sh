@@ -6,6 +6,8 @@
 
 set -oue pipefail
 
+rpm-ostree install akmod-i915-sriov
+
 # FOLLOWING INSTRUCTIONS FROM:
 # https://www.michaelstinkerings.org/gpu-virtualization-with-intel-12th-gen-igpu-uhd-730/
 # https://utcc.utoronto.ca/~cks/space/blog/linux/HandBuildKernelModule
