@@ -19,9 +19,6 @@ rpm-ostree install akmod-i915-sriov
 
 akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 
-# Force overwrite the i915 kernel module?
-ln -sf /usr/lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/extra/i915-sriov/i915.ko.xz /usr/lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/kernel/drivers/gpu/drm/i915/i915.ko.xz
-
 # FOLLOWING INSTRUCTIONS FROM:
 # https://www.michaelstinkerings.org/gpu-virtualization-with-intel-12th-gen-igpu-uhd-730/
 # https://utcc.utoronto.ca/~cks/space/blog/linux/HandBuildKernelModule
