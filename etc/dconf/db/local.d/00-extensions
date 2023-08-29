@@ -28,6 +28,7 @@ stacked-tiling-mode-enabled=false
 tabbed-tiling-mode-enabled=false
 tiling-mode-enabled=true
 window-gap-hidden-on-single=false
+focus-border-toggle=false
 
 [org/gnome/shell/extensions/net/gfxmonk/impatience]
 speed-factor=0.3

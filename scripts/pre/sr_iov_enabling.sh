@@ -10,9 +10,6 @@ rpm-ostree install sysfsutils
 
 echo "devices/pci0000:00/0000:00:02.0/sriov_numvfs = 7" > /etc/sysfs.conf
 
-# Delete other kernel module
-rm -rf /usr/lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/kernel/drivers/gpu/drm/i915/i915.ko.xz
-
 # allow simple `dnf install` style commands to work (in some spec scripts)
 ln -s /usr/bin/rpm-ostree /usr/bin/dnf
 ln -s /usr/bin/ld.bfd /etc/alternatives/ld && ln -s /etc/alternatives/ld /usr/bin/ld 
@@ -21,8 +18,6 @@ ln -s /usr/bin/ld.bfd /etc/alternatives/ld && ln -s /etc/alternatives/ld /usr/bi
 rpm-ostree install akmod-i915-sriov
 
 akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --kmod i915-sriov
-
-mv /usr/lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/extra/i915-sriov/i915.ko.xz /usr/lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/kernel/drivers/gpu/drm/i915/i915.ko.xz
 
 # FOLLOWING INSTRUCTIONS FROM:
 # https://www.michaelstinkerings.org/gpu-virtualization-with-intel-12th-gen-igpu-uhd-730/
