@@ -24,6 +24,11 @@ akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.
 
 echo "i915" > /etc/modules-load.d/i915-sriov.conf
 
+mkdir -p /tmp/i915-sriov/
+cp "$(find /var/cache/akmods/i915-sriov | grep rpm)" /tmp/i915-sriov/i915-sriov.rpm
+
+rpm-ostree install /tmp/i915-sriov/i915-sriov.rpm
+
 # FOLLOWING INSTRUCTIONS FROM:
 # https://www.michaelstinkerings.org/gpu-virtualization-with-intel-12th-gen-igpu-uhd-730/
 # https://utcc.utoronto.ca/~cks/space/blog/linux/HandBuildKernelModule
