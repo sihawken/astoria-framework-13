@@ -27,6 +27,7 @@ gnome_extensions+=( 1386 ) # 1386 notification counter
 gnome_extensions+=( 1446 ) # 1446 transparent window moving
 gnome_extensions+=( 3733 ) # 3733 tiling assistant
 gnome_extensions+=( 3956 ) # 3956 gnome fuzzy app search
+gnome_extensions+=( 4245 ) # 4245 gesture improvements
 gnome_extensions+=( 4228 ) # 4288 wireless HID
 gnome_extensions+=( 4691 ) # 4691 PiP on top
 gnome_extensions+=( 4711 ) # 4711 prevent double empty window
