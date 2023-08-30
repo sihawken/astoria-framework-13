@@ -26,7 +26,6 @@ gnome_extensions+=( 779 ) # 779 clipboard indicator
 gnome_extensions+=( 1386 ) # 1386 notification counter
 gnome_extensions+=( 1446 ) # 1446 transparent window moving
 gnome_extensions+=( 3956 ) # 3956 gnome fuzzy app search
-gnome_extensions+=( 4099 ) # 4099 no overview at startup
 gnome_extensions+=( 4228 ) # 4288 wireless HID
 gnome_extensions+=( 4481 ) # 4481 forge
 gnome_extensions+=( 4691 ) # 4691 PiP on top
