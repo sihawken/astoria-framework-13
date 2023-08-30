@@ -17,7 +17,9 @@ ln -s /usr/bin/ld.bfd /etc/alternatives/ld && ln -s /etc/alternatives/ld /usr/bi
 # Install akmod-i915
 rpm-ostree install akmod-i915-sriov
 
-# akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --kmod i915-sriov
+akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --kmod i915-sriov
+
+dracut --regenerate-all -f
 
 # FOLLOWING INSTRUCTIONS FROM:
 # https://www.michaelstinkerings.org/gpu-virtualization-with-intel-12th-gen-igpu-uhd-730/
