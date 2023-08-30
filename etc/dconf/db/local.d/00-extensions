@@ -49,6 +49,8 @@ gap-size=4
 
 [org/gnome/shell/extensions/gestureImprovements/]
 allow-minimize-window=false
+pinch-3-finger-gesture='NONE'
+pinch-4-finger-gesture='SHOW_DESKTOP'
 
 [org/gnome/shell/extensions/gtk4-ding/]
 show-trash=false
