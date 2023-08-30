@@ -21,6 +21,7 @@ height-fraction=0.90000000000000002
 autohide-in-fullscreen=true
 multi-monitor=true
 isolate-workspaces=true
+apply-custom-theme=true
 
 [org/gnome/shell/extensions/mreditor/scroll-panel]
 workspaces-switcher-visualize=false
