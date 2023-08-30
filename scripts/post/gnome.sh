@@ -17,7 +17,6 @@ mv gnome-shell-extension-installer /usr/bin/
 declare -a gnome_extensions
 gnome_extensions=()
 gnome_extensions+=( 7 ) # 7 removeable drive menu
-gnome_extensions+=( 97 ) # 97 coverflow alt-tab
 gnome_extensions+=( 277 ) # 277 impatience
 gnome_extensions+=( 307 ) # 307 dash-to-dock
 gnome_extensions+=( 517 ) # 517 caffeine
