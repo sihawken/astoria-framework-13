@@ -31,7 +31,6 @@ gnome_extensions+=( 4228 ) # 4288 wireless HID
 gnome_extensions+=( 4257 ) # 4257 scroll panel
 gnome_extensions+=( 4481 ) # 4481 forge
 gnome_extensions+=( 4691 ) # 4691 PiP on top
-gnome_extensions+=( 4709 ) # 4709 another window session manager
 gnome_extensions+=( 4711 ) # 4711 prevent double empty window
 gnome_extensions+=( 4854 ) # 4854 system76 scheduler
 gnome_extensions+=( 4937 ) # 4937 draw on your screen 2
