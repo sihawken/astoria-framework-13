@@ -34,6 +34,7 @@ gnome_extensions+=( 4711 ) # 4711 prevent double empty window
 gnome_extensions+=( 4854 ) # 4854 system76 scheduler
 gnome_extensions+=( 4937 ) # 4937 draw on your screen 2
 gnome_extensions+=( 5090 ) # 5090 space bar
+gnome_extensions+=( 5263 ) # 5263 gtk4-desktop-icons-ng-ding
 gnome_extensions+=( 5353 ) # 5353 window state manager
 gnome_extensions+=( 5410 ) # 5410 grand theft focus
 gnome_extensions+=( 5425 ) # 5425 battery time
