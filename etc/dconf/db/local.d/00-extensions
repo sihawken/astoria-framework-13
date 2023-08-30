@@ -31,7 +31,7 @@ window-gap-hidden-on-single=false
 focus-border-toggle=false
 
 [org/gnome/shell/extensions/net/gfxmonk/impatience]
-speed-factor=0.3
+speed-factor=0.5
 
 [org/gnome/shell/extensions/space-bar/behavior]
 position='left'
