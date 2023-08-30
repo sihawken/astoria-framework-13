@@ -44,13 +44,13 @@ single-screen-gap=4
 dynamic-keybinding-behavior=0
 active-window-hint=1
 
-[org/gnome/shell/extensions/one-window-wonderland/]
+[org/gnome/shell/extensions/one-window-wonderland]
 gap-size=4
 
-[org/gnome/shell/extensions/gestureImprovements/]
+[org/gnome/shell/extensions/gestureImprovements]
 allow-minimize-window=false
 pinch-3-finger-gesture='NONE'
 pinch-4-finger-gesture='SHOW_DESKTOP'
 
-[org/gnome/shell/extensions/gtk4-ding/]
+[org/gnome/shell/extensions/gtk4-ding]
 show-trash=false
