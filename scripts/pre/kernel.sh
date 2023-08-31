@@ -12,7 +12,7 @@ KERNEL_VERSION=6.2.9-300.fc38.x86_64
 # Remove unecessary kmod packages
 rpm-ostree override remove kmod-xpadneo* xpadneo* kmod-v4l2loopback* v4l2loopback* kmod-xone* xone* kmod-xpad-noone* xpad-noone*
 
-rpm-ostree override replace ${KERNEL_REPO}/kernel-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-core-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-modules-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-uki-virt-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-modules-extra-${KERNEL_VERSION}.rpm && \
+rpm-ostree override replace ${KERNEL_REPO}/kernel-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-core-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-modules-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-uki-virt-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-modules-extra-${KERNEL_VERSION}.rpm
 rpm-ostree install ${KERNEL_REPO}/kernel-devel-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-devel-matched-${KERNEL_VERSION}.rpm
 
 rpm-ostree install sysfsutils
