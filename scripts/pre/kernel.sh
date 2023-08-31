@@ -9,7 +9,8 @@ set -oue pipefail
 KERNEL_REPO=https://kojipkgs.fedoraproject.org/packages/kernel/6.2.9/300.fc38/x86_64
 KERNEL_VERSION=6.2.9-300.fc38.x86_64
 
-rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-extra --install ${KERNEL_REPO}/kernel-${KERNEL_VERSION}.rpm --install ${KERNEL_REPO}/kernel-core-${KERNEL_VERSION}.rpm --install ${KERNEL_REPO}/kernel-modules-${KERNEL_VERSION}.rpm --install ${KERNEL_REPO}/kernel-modules-extra-${KERNEL_VERSION}.rpm
+rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-extra
+rpm-ostree install ${KERNEL_REPO}/kernel-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-core-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-modules-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-modules-extra-${KERNEL_VERSION}.rpm
 rpm-ostree install ${KERNEL_REPO}/kernel-devel-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-devel-matched-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-uki-virt-${KERNEL_VERSION}.rpm
 
 rpm-ostree install sysfsutils
