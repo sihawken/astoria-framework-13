@@ -8,7 +8,6 @@ set -oue pipefail
 
 KERNEL_REPO=https://kojipkgs.fedoraproject.org/packages/kernel/6.2.9/300.fc38/x86_64
 KERNEL_VERSION=6.2.9-300.fc38.x86_64
-
 rpm-ostree override replace ${KERNEL_REPO}/kernel-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-core-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-modules-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-modules-core-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-modules-extra-${KERNEL_VERSION}.rpm
 rpm-ostree install ${KERNEL_REPO}/kernel-devel-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-debug-core-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-debug-modules-core-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-uki-virt-${KERNEL_VERSION}.rpm ${KERNEL_REPO}/kernel-devel-matched-${KERNEL_VERSION}.rpm
 
@@ -22,8 +21,11 @@ ln -s /usr/bin/ld.bfd /etc/alternatives/ld && ln -s /etc/alternatives/ld /usr/bi
 
 # Install akmod-i915
 rpm-ostree install akmod-i915-sriov
-
 akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --kmod i915-sriov
+
+# regenerate initramfs
+/usr/bin/dracut --tmpdir /tmp/ --no-hostonly --kver "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --reproducible --add ostree -f /tmp/initramfs2.img && \
+mv /tmp/initramfs2.img /lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/initramfs.img
 
 # FOLLOWING INSTRUCTIONS FROM:
 # https://www.michaelstinkerings.org/gpu-virtualization-with-intel-12th-gen-igpu-uhd-730/
