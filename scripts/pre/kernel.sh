@@ -19,7 +19,7 @@ rpm-ostree install akmod-i915-sriov
 akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --kmod i915-sriov
 
 # regenerate initramfs
-/usr/bin/dracut --tmpdir /tmp/ --no-hostonly --kver "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --reproducible --add ostree -f /tmp/initramfs2.img
+/usr/bin/dracut --tmpdir /tmp/ --fstab --no-hostonly --kver "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --reproducible --add ostree -f /tmp/initramfs2.img
 mv /tmp/initramfs2.img /lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/initramfs.img
 
 # FOLLOWING INSTRUCTIONS FROM:
