@@ -1,8 +1,10 @@
 ARG FEDORA_MAJOR_VERSION=38
 ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
 
-FROM ${BASE_IMAGE_URL}:${FEDORA_MAJOR_VERSION}
+FROM ${BASE_IMAGE_URL}:${FEDORA_MAJOR_VERSION} as builderimage
 ARG RECIPE
+
+RUN rpm-ostree cliwrap install-to-root /
 
 # copy over configuration files
 # etc is copied to /usr/etc/ to prevent "merge conflicts"
