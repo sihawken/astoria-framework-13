@@ -14,9 +14,14 @@ echo "devices/pci0000:00/0000:00:02.0/sriov_numvfs = 7" > /etc/sysfs.conf
 ln -s /usr/bin/rpm-ostree /usr/bin/dnf
 ln -s /usr/bin/ld.bfd /etc/alternatives/ld && ln -s /etc/alternatives/ld /usr/bin/ld 
 
+rpm-ostree cliwrap install-to-root /
+
 # Install akmod-i915
 rpm-ostree install akmod-i915-sriov
 akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --kmod i915-sriov
+
+/usr/bin/dracut --tmpdir /tmp/ --no-hostonly --kver "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --reproducible --add ostree -f /tmp/initramfs2.img
+mv /tmp/initramfs2.img /lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/initramfs.img
 
 # FOLLOWING INSTRUCTIONS FROM:
 # https://www.michaelstinkerings.org/gpu-virtualization-with-intel-12th-gen-igpu-uhd-730/
