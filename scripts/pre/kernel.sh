@@ -10,9 +10,9 @@ rpm-ostree install sysfsutils
 
 echo "devices/pci0000:00/0000:00:02.0/sriov_numvfs = 7" > /etc/sysfs.conf
 
-# # Install akmod-i915
-# rpm-ostree install akmod-i915-sriovecho "Updating initramfs with dracut..."
-# akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --kmod i915-sriov
+# Install akmod-i915
+rpm-ostree install akmod-i915-sriov
+akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --kmod i915-sriov
 
 # # Regenerate the initramfs
 # /usr/libexec/rpm-ostree/wrapped/dracut --tmpdir /tmp/ --no-hostonly --kver "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --reproducible --add ostree -f /tmp/initramfs2.img
