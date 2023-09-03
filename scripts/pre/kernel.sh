@@ -18,6 +18,8 @@ ln -s /usr/bin/ld.bfd /etc/alternatives/ld && ln -s /etc/alternatives/ld /usr/bi
 rpm-ostree install akmod-i915-sriov
 akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 
+depmod -a "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
+
 # Regenerate the initramfs
 /usr/bin/dracut --tmpdir /tmp/ --no-hostonly --kver "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --reproducible --add ostree -f /tmp/initramfs2.img
 mv /tmp/initramfs2.img /lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/initramfs.img
