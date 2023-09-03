@@ -8,7 +8,7 @@ set -oue pipefail
 
 rpm-ostree install sysfsutils
 
-echo "devices/pci0000:00/0000:00:02.0/sriov_numvfs = 7" > /etc/sysfs.conf
+echo "devices/pci0000:00/0000:00:02.0/sriov_numvfs = 2" > /etc/sysfs.conf
 
 # allow simple `dnf install` style commands to work (in some spec scripts)
 ln -s /usr/bin/rpm-ostree /usr/bin/dnf
