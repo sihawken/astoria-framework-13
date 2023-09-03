@@ -21,8 +21,7 @@ akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.
 depmod -a "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 
 # Regenerate the initramfs
-/usr/bin/dracut --tmpdir /tmp/ --no-hostonly --kver "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" --reproducible --add ostree -f /tmp/initramfs2.img
-mv /tmp/initramfs2.img /lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/initramfs.img
+/usr/bin/dracut --reproducible -v --add 'ostree' --no-hostonly -f /lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/initramfs.img "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 
 # FOLLOWING INSTRUCTIONS FROM:
 # https://www.michaelstinkerings.org/gpu-virtualization-with-intel-12th-gen-igpu-uhd-730/
