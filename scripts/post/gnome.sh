@@ -24,6 +24,7 @@ gnome_extensions+=( 615 ) # 615 appindicator and kstatusnotifieritem support
 gnome_extensions+=( 779 ) # 779 clipboard indicator
 gnome_extensions+=( 1386 ) # 1386 notification counter
 gnome_extensions+=( 1446 ) # 1446 transparent window moving
+gnome_extensions+=( 3193 ) # 3193 blur my shell
 gnome_extensions+=( 3733 ) # 3733 tiling assistant
 gnome_extensions+=( 3956 ) # 3956 gnome fuzzy app search
 gnome_extensions+=( 4245 ) # 4245 gesture improvements
@@ -39,7 +40,6 @@ gnome_extensions+=( 5410 ) # 5410 grand theft focus
 gnome_extensions+=( 5425 ) # 5425 battery time
 gnome_extensions+=( 5482 ) # 5482 toggle workspace span
 gnome_extensions+=( 5835 ) # 5835 rx input layout switcher
-gnome_extensions+=( 5856 ) # 5856 overview background
 gnome_extensions+=( 5895 ) # 5895 app hider
 
 gnome-shell-extension-installer --yes ${gnome_extensions[@]}
