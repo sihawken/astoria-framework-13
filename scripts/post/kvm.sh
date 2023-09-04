@@ -7,3 +7,5 @@ set -oue pipefail
 
 rpm-ostree install virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm \
     virt-manager virt-viewer guestfs-tools python3-libguestfs virt-top acpid
+
+systemctl start acpid.service
