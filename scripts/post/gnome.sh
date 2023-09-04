@@ -23,6 +23,7 @@ gnome_extensions+=( 517 ) # 517 caffeine
 gnome_extensions+=( 615 ) # 615 appindicator and kstatusnotifieritem support
 gnome_extensions+=( 779 ) # 779 clipboard indicator
 gnome_extensions+=( 1386 ) # 1386 notification counter
+gnome_extensions+=( 1437 ) # 1437 current screen only for alternate tab
 gnome_extensions+=( 1446 ) # 1446 transparent window moving
 gnome_extensions+=( 3193 ) # 3193 blur my shell
 gnome_extensions+=( 3733 ) # 3733 tiling assistant
