@@ -42,6 +42,7 @@ gnome_extensions+=( 5425 ) # 5425 battery time
 gnome_extensions+=( 5482 ) # 5482 toggle workspace span
 gnome_extensions+=( 5835 ) # 5835 rx input layout switcher
 gnome_extensions+=( 5895 ) # 5895 app hider
+gnome_extensions+=( 6239 ) # 6239 unmess
 
 gnome-shell-extension-installer --yes ${gnome_extensions[@]}
 
