@@ -23,5 +23,5 @@ depmod -a "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 # Regenerate the initramfs
 /usr/bin/dracut --reproducible -v --add 'ostree' --no-hostonly -f /lib/modules/"$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"/initramfs.img "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 
-echo 'ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x8086", ATTR{device}=="0x4626", ATTR{sriov_numvfs}="1"' >  /etc/udev/rules.d/sriov.rules
+echo 'ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x8086", ATTR{device}=="0x4626", ATTR{sriov_numvfs}="1"' >  /etc/udev/rules.d/5-sriov.rules
 
