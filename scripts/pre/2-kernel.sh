@@ -11,7 +11,7 @@ ln -s /usr/bin/rpm-ostree /usr/bin/dnf
 ln -s /usr/bin/ld.bfd /etc/alternatives/ld && ln -s /etc/alternatives/ld /usr/bin/ld 
 
 # Install akmod-i915
-rpm-ostree install akmod-i915-sriov-backports
+rpm-ostree install akmod-i915-sriov
 akmods --force --kernels "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 
 depmod -a "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
