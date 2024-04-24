@@ -48,6 +48,7 @@ rpm:
   # which greatly simplifies future maintenance of your custom recipe.
   repos:
     # Example (which also demonstrates version number expansion):
+    - https://copr.fedorainfracloud.org/coprs/xxmitsu/mesa-git/repo/fedora-%FEDORA_VERSION%/xxmitsu-mesa-git-fedora-%FEDORA_VERSION%.repo?arch=x86_64
     - https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-%FEDORA_VERSION%/kylegospo-system76-scheduler-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/sihawken/akmods/repo/fedora-%FEDORA_VERSION%/sihawken-akmods-%FEDORA_VERSION%.repo
 
